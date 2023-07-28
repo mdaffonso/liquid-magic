@@ -40,6 +40,7 @@ const replaceCode = () => {
   r('<\s*span[^>]*>', '')
   sr('devmode="false"', '')
   r('  +', ' ')
+  r('Sonstiges:: ?|Other:: ?', '')
 
   toast.success('Code replaced successfully! The good one is now in your clipboard.')
 
