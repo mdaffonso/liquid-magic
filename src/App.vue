@@ -94,10 +94,13 @@ button {
   background-color: limegreen;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.25s ease-in-out;
   z-index: 2;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   user-select: none;
+}
+
+button:focus {
+  box-shadow: 0 0 0 3px white, 0 0 0 8px skyblue, 0 12px 12px rgba(0, 0, 0, 0.25);
 }
 
 .button-done {
@@ -115,9 +118,9 @@ button {
   right: 12px;
   border-width: 0.5rem;
   border-style: solid;
-  border-color: lightgrey transparent transparent transparent;
+  border-color: skyblue #e8e8e8 #e8e8e8 #e8e8e8;
   animation: spin 1s ease-in-out forwards,
-    shrink .25s 1s cubic-bezier(.77,-0.86,.39,1.07) forwards;
+    fade-out .25s 1s ease-in-out forwards;
 }
 
 @keyframes spin {
@@ -129,12 +132,12 @@ button {
   }
 }
 
-@keyframes shrink {
+@keyframes fade-out {
   0% {
-    transform: scale(1);
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
+    opacity: 0;
   }
 }
 </style>
