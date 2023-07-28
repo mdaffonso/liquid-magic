@@ -7,6 +7,7 @@ This is a straightforward tool made to solve one specific issue: roughly transla
 Get the HTML output from Doc Factory, and paste it in the area available in the app, and click the magic wand button on the bottom right corner. You'll get a message indicating your operation was successful. You may get warning messages as well. They appear with a yellow background. Pay attention to those.
 
 Now all you need to do is paste onto the original file, and the content will be updated with the correct replaced values.
+
 ## How to run it locally
 
 These are the things you need to run this project in your machine:
@@ -15,11 +16,9 @@ These are the things you need to run this project in your machine:
 - node
 - pnpm
 
-Start by cloning the repository. Run these commands in your terminal:
+Start by cloning the repository, then, in the root folder of the newly cloned project, run:
 
 ```bash
-git clone ssh://git@gitlab.dataguard.de:1023/maffonso/liquid-replacer.git
-cd liquid-replacer
 pnpm dev
 ```
 

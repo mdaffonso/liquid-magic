@@ -1,9 +1,8 @@
 <script setup>
-import { useToast } from 'vue-toast-notification'
 import { ref, computed } from 'vue'
-import wandIcon from './assets/wand.svg'
+import { useToast } from 'vue-toastification'
 
-import 'vue-toast-notification/dist/theme-sugar.css'
+import wandIcon from './assets/wand.svg'
 
 const code = ref('')
 const history = ref([])
@@ -42,14 +41,10 @@ const replaceCode = () => {
   sr('devmode="false"', '')
   r('  +', ' ')
 
-  const success = toast.success('Code replaced successfully! The good one is now in your clipboard.', {
-    position: 'top'
-  })
+  toast.success('Code replaced successfully! The good one is now in your clipboard.')
 
   if (code.value.includes('if ==')) {
-    const warning = toast.warning('You have an "if ==" in your code. Please manually look for it and add the correct variables between "if" and "==".', {
-      position: 'top'
-    })
+    toast.warning('You have an "if ==" in your code. Please manually look for it and add the correct variables between "if" and "==".')
   }
 }
 
